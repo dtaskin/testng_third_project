@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
 import pages.CarvanaHomePage;
 import pages.SearchCarsPage;
+import utilities.ConfigReader;
 import utilities.Driver;
 
 public class Base {
@@ -20,6 +21,7 @@ public class Base {
     @BeforeMethod
     public void setUp(){
         driver = Driver.getDriver();
+        driver.get(ConfigReader.getProperty("prod-url"));
         softAssert = new SoftAssert();
         carvanaHomePage = new CarvanaHomePage();
         searchCarsPage = new SearchCarsPage();

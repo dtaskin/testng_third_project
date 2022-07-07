@@ -11,7 +11,7 @@ public class CarvanaHomePage {
     public CarvanaHomePage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-    @FindBy(css = "div[class='Logo__LogoWrapper-sc-14r2405-0 fSZhVx']")
+    @FindBy(css = "div[data-qa='logo-wrapper']")
     public WebElement logo;
 
     @FindBy(css = "[class^='Navigationstyles__NavigationWrapper']>div>a")
@@ -21,16 +21,16 @@ public class CarvanaHomePage {
     public WebElement signInLink;
 
     @FindBy(css = "[class^='HeaderContainer']")
-    public WebElement signInModalHeader;
+    public WebElement signInModal;
 
     @FindBy(css = "#usernameField")
-    public WebElement email;
+    public WebElement emailInputBox;
 
     @FindBy(css = "#passwordField")
-    public WebElement password;
+    public WebElement passwordInputBox;
 
     @FindBy(css = "button[data-cv='sign-in-submit']")
-    public WebElement signInButton;
+    public WebElement modalSignInButton;
 
     @FindBy(css = "div[data-qa='error-message-container']")
     public WebElement errorMessage;
